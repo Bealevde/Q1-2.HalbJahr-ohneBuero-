@@ -1,0 +1,72 @@
+
+/**
+ * Beschreiben Sie hier die Klasse Stack.
+ * 
+ * @author (Ihr Name) 
+ * @version (eine Versionsnummer oder ein Datum)
+ */
+public class MyStack<ContentType>{
+    
+    
+    
+    private class QueueNode {
+
+        private ContentType content = null;
+        private QueueNode nextNode = null;
+
+       
+        public QueueNode(ContentType pContent) {
+            content = pContent;
+            nextNode = null;
+        }
+
+        
+        public void setNext(QueueNode pNext) {
+            nextNode = pNext;
+        }
+
+        
+        public QueueNode getNext() {
+            return nextNode;
+        }
+
+        public ContentType getContent() {
+            return content;
+        }
+
+    }
+    private QueueNode head;
+    
+    public MyStack(){
+        
+    }
+    
+    public boolean isEmpty() {
+        return head == null;
+    }
+    
+    public void push(ContentType pContent){
+    
+    }
+    
+    public void pop(){
+    
+    }
+    
+    public ContentType top(){
+        if(this.isEmpty()){
+            return null;
+        } else{
+            return head.getContent();
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
