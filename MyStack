@@ -38,7 +38,7 @@ public class MyStack<ContentType>{
     private QueueNode head;
     
     public MyStack(){
-        
+       head = null; 
     }
     
     public boolean isEmpty() {
@@ -46,11 +46,15 @@ public class MyStack<ContentType>{
     }
     
     public void push(ContentType pContent){
-    
+        if(pContent != null){
+            QueueNode newNode = new QueueNode(pContent);
+            newNode.setNext(head);
+            head = newNode;
+        }
     }
     
     public void pop(){
-    
+        head = head.getNext();
     }
     
     public ContentType top(){
