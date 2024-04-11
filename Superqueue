@@ -1,0 +1,22 @@
+
+public class Superqueue extends Queue{
+     public Superqueue(){
+        
+    }
+     
+     public int laenge(){
+        int zaehler = 0;
+         Queue temp = new Queue();
+         while(!this.isEmpty()){
+           temp.enqueue(front());
+           dequeue();
+           zaehler++;
+        }
+        while(!temp.isEmpty()) {
+            enqueue(temp.front());
+            temp.dequeue();
+         
+            }
+        return zaehler;
+    }   
+}
