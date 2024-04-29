@@ -1,0 +1,44 @@
+
+public class List<ContentType>{
+    Node tail;
+    Node head;
+    Node AE;
+    
+    public void append(ContentType pContent){
+        if (pContent != null) {
+            Node newNode = new Node(pContent);
+            tail.setNext(newNode);
+            tail = newNode;
+            } 
+    }
+    
+    public void insert(ContentType pContent){
+        if(pContent != null){
+            Node newNode = new Node(pContent);
+            if(hasAccess() == true){
+                newNode.setNext(AE.getNext);
+                AE.setNext(newNode);
+                
+            }else{
+                head = newNode;
+                tail = newNode;
+            }   
+        }   
+    }
+    
+    public void concat(ContentType pList){
+        //next von dem Head von plist auf tail von list 
+        if(phead != null){
+            phead.setNext(tail);
+            tail.setNext(ptail);
+            phead = null;
+            ptail = null;
+        }
+    
+    }
+    
+    public void remove(){
+        // wenn AE da dann rausmachen 
+        //der next auf ae hat, soll next auf den next von AE
+    }
+}
