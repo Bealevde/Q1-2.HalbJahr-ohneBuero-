@@ -2,21 +2,36 @@
 
 public class Einkaufen<ContentTyp>
 {
+    private List liste;
     
     public Einkaufen(){
         List liste = new List();
     }
     
     public void neuerEintrag(ContentTyp pName){
-    
+        liste.insert(pName);
     }
     
     public void eintragloeschen(ContentTyp pName){
-    
+        if(suche(pName)){
+            while(liste.getContent() != pName){
+                liste.next();    
+            }
+            liste.remove();
+        }
+        
     }
     
     public boolean suche(ContentTyp pName){
-        return true;
+        liste.toFirst();
+        while(liste.hasAccess() ){
+            if(liste.getContent() == pName){
+                return true; 
+            }else{
+                liste.next();
+            }
+        }
+        return false;
     }
     
     public void ausgeben(){
