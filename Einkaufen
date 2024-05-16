@@ -1,0 +1,30 @@
+
+
+public class Einkaufen<ContentTyp>
+{
+    
+    public Einkaufen(){
+        List liste = new List();
+    }
+    
+    public void neuerEintrag(ContentTyp pName){
+    
+    }
+    
+    public void eintragloeschen(ContentTyp pName){
+    
+    }
+    
+    public boolean suche(ContentTyp pName){
+        return true;
+    }
+    
+    public void ausgeben(){
+    
+    }
+    
+    public void loeschealles(){
+    
+    }
+    
+}
